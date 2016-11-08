@@ -15,6 +15,7 @@
 		7C1099961DCC8D990057C264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1099941DCC8D990057C264 /* LaunchScreen.storyboard */; };
 		7C1099A11DCC8D990057C264 /* PRCycleProgressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1099A01DCC8D990057C264 /* PRCycleProgressTests.m */; };
 		7C1099AC1DCC8D990057C264 /* PRCycleProgressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1099AB1DCC8D990057C264 /* PRCycleProgressUITests.m */; };
+		7C1099BC1DCC95C90057C264 /* CycleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1099BB1DCC95C90057C264 /* CycleProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7C1099A71DCC8D990057C264 /* PRCycleProgressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PRCycleProgressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C1099AB1DCC8D990057C264 /* PRCycleProgressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRCycleProgressUITests.m; sourceTree = "<group>"; };
 		7C1099AD1DCC8D990057C264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C1099BA1DCC95C90057C264 /* CycleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleProgressView.h; sourceTree = "<group>"; };
+		7C1099BB1DCC95C90057C264 /* CycleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		7C1099851DCC8D990057C264 /* PRCycleProgress */ = {
 			isa = PBXGroup;
 			children = (
+				7C1099B91DCC95A60057C264 /* progress */,
 				7C1099891DCC8D990057C264 /* AppDelegate.h */,
 				7C10998A1DCC8D990057C264 /* AppDelegate.m */,
 				7C10998C1DCC8D990057C264 /* ViewController.h */,
@@ -138,6 +142,15 @@
 				7C1099AD1DCC8D990057C264 /* Info.plist */,
 			);
 			path = PRCycleProgressUITests;
+			sourceTree = "<group>";
+		};
+		7C1099B91DCC95A60057C264 /* progress */ = {
+			isa = PBXGroup;
+			children = (
+				7C1099BA1DCC95C90057C264 /* CycleProgressView.h */,
+				7C1099BB1DCC95C90057C264 /* CycleProgressView.m */,
+			);
+			name = progress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +289,7 @@
 				7C10998E1DCC8D990057C264 /* ViewController.m in Sources */,
 				7C10998B1DCC8D990057C264 /* AppDelegate.m in Sources */,
 				7C1099881DCC8D990057C264 /* main.m in Sources */,
+				7C1099BC1DCC95C90057C264 /* CycleProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PRCycleProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weixu.PRCycleProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PRCycleProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weixu.PRCycleProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +523,7 @@
 				7C1099B21DCC8D990057C264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C1099B31DCC8D990057C264 /* Build configuration list for PBXNativeTarget "PRCycleProgressTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +532,7 @@
 				7C1099B51DCC8D990057C264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C1099B61DCC8D990057C264 /* Build configuration list for PBXNativeTarget "PRCycleProgressUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +541,7 @@
 				7C1099B81DCC8D990057C264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

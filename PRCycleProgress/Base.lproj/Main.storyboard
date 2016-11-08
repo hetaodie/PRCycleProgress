@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHx-0X-zZK" customClass="CycleProgressView">
+                                <rect key="frame" x="162" y="68" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.60862287985391816" green="1" blue="0.37785192781203192" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H3c-Jq-VWJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="Y4F-5X-6gU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xz8-zR-Wd5" customClass="CycleProgressView">
+                                <rect key="frame" x="137" y="211" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.54996157930366696" green="0.52537258801418174" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bKi-u1-9jw"/>
+                                    <constraint firstAttribute="height" constant="100" id="gXA-j1-f1I"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvh-gq-rpw" customClass="CycleProgressView">
+                                <rect key="frame" x="112" y="328" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.60862287989999997" green="1" blue="0.37785192779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0Ow-pO-eOc"/>
+                                    <constraint firstAttribute="width" constant="150" id="OY8-kr-2Vj"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T2w-qi-auZ">
+                                <rect key="frame" x="13" y="587" width="349" height="31"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MVP-Bq-IDx"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T2w-qi-auZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="4iU-Zm-uhf"/>
+                            <constraint firstItem="BHx-0X-zZK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ir6-7y-EhJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="T2w-qi-auZ" secondAttribute="bottom" constant="50" id="Iwy-Za-xVS"/>
+                            <constraint firstItem="Xz8-zR-Wd5" firstAttribute="top" secondItem="BHx-0X-zZK" secondAttribute="bottom" constant="93" id="K8M-6e-Xqg"/>
+                            <constraint firstItem="zvh-gq-rpw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M7m-JE-U3B"/>
+                            <constraint firstItem="zvh-gq-rpw" firstAttribute="top" secondItem="Xz8-zR-Wd5" secondAttribute="bottom" constant="17" id="So2-Yq-Gav"/>
+                            <constraint firstItem="BHx-0X-zZK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="ZDc-x7-csE"/>
+                            <constraint firstAttribute="trailing" secondItem="T2w-qi-auZ" secondAttribute="trailing" constant="15" id="lBh-Dc-CEB"/>
+                            <constraint firstItem="Xz8-zR-Wd5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mhi-MV-YxR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="cycleProgressViews" destination="BHx-0X-zZK" id="ieF-bI-PIq"/>
+                        <outletCollection property="cycleProgressViews" destination="Xz8-zR-Wd5" id="qfo-cW-a4w"/>
+                        <outletCollection property="cycleProgressViews" destination="zvh-gq-rpw" id="qth-S7-yY4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
